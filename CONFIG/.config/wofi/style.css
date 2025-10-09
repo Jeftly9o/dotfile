@@ -1,0 +1,159 @@
+/* Global styles */
+window {
+  margin: 0px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.435);
+  font-family: JetBrains Mono, monospace;
+  color:rgb(182, 182, 182);
+}
+
+/* Input box */
+#input {
+  margin: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgba(126, 126, 126, 0.698);
+  background-color: rgba(95, 95, 95, 0.563);
+  padding: 6px;
+  border-radius: 5px;
+}
+
+#input::placeholder {
+  color:rgba(153, 163, 77, 0.535);
+}
+
+#input:focus {
+  color: rgba(117, 31, 255, 0.719);
+}
+
+#input prompt {
+  color: rgba(40, 164, 48, 0.554);
+}
+
+#input image {
+  color:rgb(58, 160, 33);
+}
+
+#prompt {
+  color: rgb(15, 93, 119);
+}
+
+/* Inner box */
+#inner-box {
+  margin: 5px;
+  border: none;
+  color:rgb(11, 53, 7);
+  padding: 0px;
+}
+
+/* Outer box */
+#outer-box {
+  margin: 5px;
+  border: none;
+  padding: 5px;
+}
+
+/* Scroll area */
+#scroll {
+  margin: 0px;
+}
+
+/* Text styling */
+#text {
+  margin: 5px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+}
+
+#entry.activatable #text {
+  color: rgb(255, 255, 255);
+}
+
+#entry > * {
+  color: rgb(255, 255, 255);
+}
+
+/* Active entry */
+#entry:selected {
+  background-color: rgba(59, 17, 197, 0.57);
+  border-radius: 5px;
+}
+
+#entry:selected #text {
+  font-weight: bold;
+  color:rgb(255, 255, 255);
+}
+
+#entry:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#entry:hover #text {
+  color: rgb(255, 255, 255);
+}
+
+/*#window {
+  color: #d8cab8;
+  border-color: #d8cab8;
+  border-style: solid;
+  border-width: 1px;
+  background-image: linear-gradient(to bottom, #141216 100%);
+  border-radius: 14px;
+}
+#scroll {
+  border-top-style: solid;
+  border-width: 1px;
+  border-color: #d8cab8;
+}
+#inner-box {
+  padding-top: 12px;
+}
+#entry {
+  border-style: none;
+  border-color: #d8cab8;
+  color: #d8cab8;
+  padding: 6px;
+  margin-bottom: 8px;
+  margin-left: 12px;
+  margin-right: 12px;
+
+  border-radius: 12px;
+}
+
+#entry:selected {
+  background: #27232b;
+  color: #d8cab8;
+  font-weight: bold;
+  outline: none;
+}
+
+#input {
+  background-color: #141216;
+  color: #d8cab8;
+  border-color: #d8cab8;
+
+  border-style: none;
+  border-bottom-style: solid;
+  border-width: 1px;
+
+  font-style: normal;
+
+  border-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  padding: 12px;
+  margin: 8px;
+}
+#input:focus {
+  background: #27232b;
+  background-color: #27232b;
+  border-color: #ac82e9;
+  font-style: italic;
+}
+
+#img {
+  padding: 4px;
+  margin-right: 6px;
+}*/
