@@ -1,2 +1,1 @@
-# dotfile
-arch dotfile
+my first dotfile, sorry for the problems
