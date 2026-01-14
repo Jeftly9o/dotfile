@@ -1,0 +1,110 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 9,
+  "margin-bottom": 6,
+  "margin-top": 0,
+  "mod": "dock",
+  "exclusive": true,
+  "gtk-layer-shell": true,
+  "passthrough": false,
+  "modules-left": ["clock", "temperature", "cpu"],
+  "modules-center": ["group/center"],
+  "modules-right": ["custom/ip", "custom/idle", "battery", "tray"],
+
+  "group/center": {
+    "orientation": "horizontal",
+    "modules": ["hyprland/workspaces", "wlr/taskbar"]
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": ["Alacritty", "WinCupl:  Atmel Version"]
+  },
+  "custom/idle": {
+    "format": "󰈈 {}",
+    "exec": "pgrep -x hypridle >/dev/null && echo 'On' || echo 'Off'",
+    "on-click": "~/.config/waybar/scripts/hypridle.sh",
+    "format-alt": "󰈉 {}"
+  },
+  "clock": {
+    "format": "{:L%I:%M %p}",
+    "interval": 1,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "smooth-scrolling-threshold": 0.01,
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%", //"<span color='#a8cd76'>{icon}</span> {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "<span color='#ff0101'></span>",
+      "<span color='#ff5e01></span>",
+      "<span color='#ff9901'></span>",
+      "<span color='#e9de07'></span>",
+      "<span color='#bfe907'></span>",
+      "<span color='#81e90a'></span>",
+      "<span color='#6be90a'></span>"
+    ],
+    //["", "", "", "", "", "", "", "", "", "", ""],
+    "format-charging": "<span color='#0ae960'></span> {capacity}%",
+    "interval": 2
+  },
+
+  "custom/ip": {
+    "format": "󰖂  {}",
+    "exec": "~/.config/waybar/scripts/ip.sh",
+    "interval": 5,
+    "spacing": 6
+  },
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
+
+  "hyprland/window": {
+    "max-length": 200,
+    "separate-outputs": true
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 10
+  },
+  "cpu": {
+    "interval": 5,
+    "format": " {usage}%"
+  },
+  "temperature": {
+    "thermal-zone": 5,
+    "critical-threshold": 70,
+    "interval": 1,
+    "format-critical": "<span color='#f31d1d'> {temperatureC}°C</span>",
+    "format": " {icon} {temperatureC}°C",
+    "format-icons": [
+      "<span color='#11c2ee'></span>",
+      "<span color='#11c2ee'></span>",
+      "<span color='#afee11'></span>",
+      "<span color='#eebb11'></span>"
+    ]
+  }
+}

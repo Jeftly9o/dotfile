@@ -1,0 +1,126 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono",
+    "Font Awesome 6 Free", monospace;
+  font-size: 10pt;
+  min-height: 0;
+  color: rgb(252, 255, 255);
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+}
+#center {
+  background-color: rgb(34, 25, 36);
+  border-radius: 20px;
+  margin: 3px 1px;
+  border: 2px solid rgb(155, 190, 190);
+}
+#rightSide,
+#custom-idle {
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(34, 25, 36, 1);
+  border: 2px solid rgb(155, 190, 190);
+}
+#tray {
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(34, 25, 36, 1);
+  border: 2px solid rgb(155, 190, 190);
+}
+
+#cpu {
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(34, 25, 36, 1);
+  border: 2px solid rgb(155, 190, 190);
+}
+#battery {
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(34, 25, 36, 1);
+  border: 2px solid rgb(155, 190, 190);
+}
+#clock {
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(34, 25, 36, 1);
+  border: 2px solid rgb(155, 190, 190);
+}
+#temperature {
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(34, 25, 36, 1);
+  border: 2px solid rgb(155, 190, 190);
+}
+#workspaces {
+  border-radius: 20px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 10px;
+  margin-left: 5px;
+  background-color: rgba(34, 25, 36, 1);
+}
+
+#workspaces button {
+  border-radius: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 1px 10px;
+  font-weight: bolder;
+  background-color: rgb(93, 70, 99);
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+  padding: 0 22px;
+  box-shadow: rgba(93, 70, 99, 0.51) 0px 0px 0px 2px,
+    rgba(93, 70, 99, 0.492) 0px 4px 6px -1px,
+    rgba(93, 70, 99, 0.617) 0px 1px 0px inset;
+  background: rgba(93, 70, 99, 1);
+  color: #acfdc4;
+}
+#workspaces button.empty {
+  opacity: 0.3;
+}
+
+#taskbar button {
+  background-color: transparent;
+  padding: 0 5px;
+  margin: 3px 1px;
+  border-radius: 10px;
+}
+
+#taskbar button.hidden {
+  color: #7d6581;
+  opacity: 0.5;
+}
+
+#taskbar button.visible {
+  color: #ffffff;
+  opacity: 1;
+}
+
+#taskbar button.active {
+  background-color: rgb(93, 70, 99);
+  color: #eceff4;
+  opacity: 1;
+}

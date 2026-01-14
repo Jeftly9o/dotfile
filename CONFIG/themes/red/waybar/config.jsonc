@@ -1,0 +1,140 @@
+{
+"layer": "top",
+"position": "top",
+"height": 9,
+"margin-bottom":6,
+"margin-top":0,
+"mod": "dock",
+"exclusive": true,
+"gtk-layer-shell": true,
+"passthrough": false,
+"modules-left": ["group/leftSide"],
+"modules-center": ["group/halfSide"],
+"modules-right":  ["group/rightSide"],
+    
+"group/leftSide": {
+	"orientation": "horizontal",
+	"modules": ["memory","cpu","custom/idle","temperature","custom/theme"]
+},
+"group/halfSide": {
+	"orientation": "horizontal",
+	"modules": ["custom/ip","hyprland/workspaces"]
+},
+"group/rightSide": {
+	"orientation": "horizontal",
+  "spacing":10,
+	"modules": ["clock","battery","tray","custom/powermenu"]
+	},
+
+  "custom/theme": {
+    "format": " 󰻀 ",
+"tooltip-format": "pengiun trick",
+    "on-click": "~/.config/waybar/scripts/lanzador.sh"
+},
+"custom/idle":{
+    "format": "󰈈 {}",
+    "exec": "pgrep -x hypridle >/dev/null && echo 'On' || echo 'Off'",
+    "on-click": "~/.config/waybar/scripts/hypridle.sh",
+    "format-alt": "󰈉 {}"
+},
+
+"cpu": {
+  "interval":5,
+  "format": "🧠 {usage}%"
+},
+
+"clock": {
+  "format": "{:L%I:%M %p}",
+  "interval": 1,   
+  "tooltip-format": "<tt>{calendar}</tt>",
+  "smooth-scrolling-threshold": 0.01,
+      "calendar": {
+        "mode"          : "year",
+        "mode-mon-col"  : 3,
+        "weeks-pos"     : "right",
+        "on-scroll"     : 1,
+            "format": {
+              "months":     "<span color='#ffead3'><b>{}</b></span>",
+              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+              }
+            }
+  },
+
+"memory": {
+  "interval": 5,
+  "format": "󰍛 {used:0.1f}GB",
+  "max-length": 10},
+
+"custom/powermenu": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/powermenu.sh"
+},
+
+"battery": {
+      "format": "{icon} {capacity}%",//"<span color='#a8cd76'>{icon}</span> {capacity}%",
+      "format-alt": "{time} {icon}",
+      "format-icons": ["<span color='#ff0101'></span>", "<span color='#ff5e01></span>",
+       "<span color='#ff9901'></span>",
+       "<span color='#e9de07'></span>", "<span color='#bfe907'></span>",
+       "<span color='#81e90a'></span>", "<span color='#6be90a'></span>"],
+      //["", "", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='#0ae960'></span> {capacity}%",
+      "interval" : 2
+    },
+
+"custom/temps": {
+  "critical-threshold": 75,
+  "exec": "~/.config/waybar/scripts/temperature.sh",
+  "interval": 2,
+  "return-type": "json"
+},
+
+"custom/ip":{
+  "format" :"󰖂  {}",
+  "exec": "~/.config/waybar/scripts/ip.sh",
+  "interval": 5,
+  "spacing":6
+},
+"hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+		"1": "<span color='#faaa79'>󰝴</span>",
+		"2": "<span color='#faaa79'>󰝴</span>",
+		"3": "<span color='#faaa79'>󰝴</span>",
+		"4": "<span color='#faaa79'>󰝴</span>",
+		"5": "<span color='#faaa79'>󰝴</span>",
+		"6": "<span color='#faaa79'>󰝴</span>",
+		"active": "<span color='#ff0000'>󱠦</span>",
+		"default": "<span color='#e1e643'></span>" 
+	}
+},
+
+"hyprland/window": {
+    "max-length": 200,
+    "separate-outputs": true
+},
+"sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+},
+"tray": {
+    "icon-size": 15,
+    "spacing": 10
+},
+
+"temperature": {
+		"thermal-zone": 5,
+		"critical-threshold": 70,
+		"interval": 1,
+		"format-critical": "<span color='#f31d1d'> {temperatureC}°C</span>",
+		"format": " {icon} {temperatureC}°C",
+		"format-icons": [
+			"<span color='#11c2ee'></span>", "<span color='#11c2ee'></span>","<span color='#afee11'></span>",  "<span color='#eebb11'></span>"
+		]
+
+	}
+}
