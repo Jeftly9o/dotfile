@@ -1,12 +1,11 @@
 my first dotfile, sorry for the problems
 
 normal setup
-sudo pacman -S hyprland hyprlock hypridle hyprpaper waybar rofi kitty swww \
+sudo pacman -S hyprlock hypridle hyprpaper waybar rofi kitty swww \
 xdg-desktop-portal-hyprland xdg-desktop-portal-gtk polkit-gnome \
-pipewire pipewire-pulse wireplumber pavucontrol brightnessctl \
 thunar thunar-volman thunar-archive-plugin thunar-media-tags-plugin \
 file-roller tumbler gvfs gvfs-mtp bluez bluez-utils blueman \
-network-manager-applet networkmanager nwg-look materia-gtk-theme papirus-icon-theme neovim git base-devel \
+network-manager-applet nwg-look neovim git base-devel \
 zsh zsh-completions zsh-syntax-highlighting fastfetch \
 htop btop cat bat lsd fzf ripgrep wget curl unzip p7zip unrar \
 python-pip nodejs npm go rust docker
